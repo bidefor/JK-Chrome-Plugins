@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>HK Stock</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6" class="tc"><input type="text" id="code" placeholder="input stock code and press enter key..."><img src="assets/images/loading.gif" id="loading"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>公司名称：</th>
+                    <td><span id="s_name"></span></td>
+                    <th>今开盘：</th>
+                    <td><span id="s_jinkaipan"></span></td>
+                    <th>昨收盘：</th>
+                    <td><span id="s_zuoshoupan"></span></td>
+                </tr>
+                <tr>
+                    <th>成交价：</th>
+                    <td><span id="s_chengjiaojia"></span></td>
+                    <th>最高价：</th>
+                    <td><span id="s_zuigaojia"></span></td>
+                    <th>最低价：</th>
+                    <td><span id="s_zuidijia"></span></td>
+                </tr>
+                <tr>
+                    <th>成交额(元)：</th>
+                    <td><span id="s_chengjiaoe"></span></td>
+                    <th>涨跌额：</th>
+                    <td><span id="s_zhangdiee"></span>%</td>
+                    <th>涨跌幅：</th>
+                    <td><span id="s_zhangdiefu"></span>%</td>
+                </tr>
+                <tr>
+                    <th>成交量(股)：</th>
+                    <td><span id="s_chengjiaoliang"></span></td>
+                    <th>52周最高：</th>
+                    <td><span id="s_zuigao"></span></td>
+                    <th>52周最低：</th>
+                    <td><span id="s_zuidi"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="tc"><span id="s_riqi"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assets/js/zepto.min.js"></script>
+    <script src="assets/js/underscore.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

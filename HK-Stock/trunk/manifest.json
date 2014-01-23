@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "HK Stock",
+    "version": "0.0.1",
+    "description": "实时查看港股价格行情",
+    "browser_action": {
+        "default_title": "HK Stock",
+        "default_icon": "assets/images/logo19x19.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "assets/images/logo48x48.png",
+        "48": "assets/images/logo48x48.png",
+        "128": "assets/images/logo48x48.png"
+    },
+    "permissions": [
+        "notifications"
+    ],
+    "background": {
+        "scripts": ["assets/js/background.js"]
+    },
+    "content_security_policy": "script-src 'self' https://jankerli.sinaapp.com; object-src 'self'"
+}

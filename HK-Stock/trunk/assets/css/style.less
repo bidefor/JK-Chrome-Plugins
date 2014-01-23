@@ -1,0 +1,59 @@
+body, table, thead, tbody, tr, td, th, input {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px "微软雅黑";
+    color: #666;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.tc {
+    text-align: center;
+}
+
+.wrap {
+    width: 620px;
+
+    table {
+
+        border-collapse: collapse;
+        border: 1px solid gray;
+
+        thead {
+            th {
+                border-collapse: collapse;
+                border: 1px solid gray;
+                padding: 8px 5px;
+
+                input {
+                    padding: 7px;
+                    width: 250px;
+                }
+
+                img {
+                    padding-left: 15px;
+                    display: none;
+                }
+            }
+        }
+
+        tbody {
+            th,
+            td {
+                width: 180px;
+                padding: 8px 5px;
+                border-collapse: collapse;
+                border-spacing: 3px;
+                border: 1px solid gray;
+            }
+
+            th {
+                text-align: right;
+            }
+        }
+    }
+}
