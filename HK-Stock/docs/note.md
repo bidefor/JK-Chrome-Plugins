@@ -1,2 +1,4 @@
-http://qt.gtimg.cn/q=s_r_hk00700
-http://qt.gtimg.cn/q=s_r_hk00434
+Todo:
+1、添加按钮手动刷新
+2、添加提醒功能
+3、只在股票开始时间内刷新
