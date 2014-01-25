@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>one key to clear chrome browsing data</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="alert alert-success" id="tips">点击按钮清除数据...</div>
+        <div class="btns">
+            <a class="btn btn-primary" data-type="appcache" id="btn-clear-appcache">清除 AppCache</a>
+            <a class="btn btn-info" data-type="localStorage" id="btn-clear-localstorage">清除 LocalStorage</a>
+            <a class="btn btn-info" data-type="cache" id="btn-clear-cache">清除 Cache</a>
+            <a class="btn btn-primary" data-type="cookies" id="btn-clear-cookies">清除 Cookies</a>
+            <a class="btn btn-primary" data-type="downloads" id="btn-clear-downloads">清除 Downloads</a>
+            <a class="btn btn-info" data-type="formData" id="btn-clear-formdata">清除 FormData</a>
+            <a class="btn btn-info" data-type="history" id="btn-clear-history">清除 History</a>
+            <a class="btn btn-primary" data-type="indexedDB" id="btn-clear-indexeddb">清除 IndexedDB</a>
+            <a class="btn btn-primary" data-type="passwords" id="btn-clear-passwords">清除 Passwords</a>
+            <a class="btn btn-info" data-type="webSQL" id="btn-clear-websql">清除 WebSQL</a>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

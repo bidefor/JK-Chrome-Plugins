@@ -1,0 +1,24 @@
+.wrap {
+    width: 344px;
+    margin: 0 auto;
+    padding: 15px 10px 0;
+    height: 270px;
+}
+.wrap .btns {
+    text-align: center;
+}
+.wrap .alert {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.wrap .btns a {
+    width: 158px;
+    float: left;
+    margin: 0 2px 5px;
+}
+.wrap .btns a:last-child {
+    margin-bottom: 0;
+}
