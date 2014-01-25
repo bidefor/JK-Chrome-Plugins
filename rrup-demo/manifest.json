@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2, // manifest 文件自身格式的版本号，从 Chrome 18开始，开发者应该（但不是必须）指定版本号为2
+
+    "name": "RRUP", // 插件名称
+    "version": "1.0.0", // 插件版本号
+    "description": "Record Read URL Pages", // 插件描述
+
+    "browser_action": {
+        "default_icon": "assets/images/19.png", // Chrome 地址栏右侧的插件图标
+        "default_popup": "index.html", // 点击插件图标时打开的页面
+        "default_title": "Record Read URL Pages" // 鼠标悬浮在插件图标时显示的插件标题
+    },
+
+    "icons": {
+        "48": "assets/images/48.png" // 扩展程序管理页的图标
+    },
+
+    "permissions": [
+        "tabs", // 获取浏览器的 tabs 权限
+        "contextMenus" // 获取浏览器的右键菜单权限
+    ],
+
+    "background": {
+        "scripts": ["assets/js/background.js"] // 后台页执行脚本文件
+    },
+
+    // 解决 javascript 跨域限制
+    "content_security_policy": "script-src 'self' https://rrup.sinaapp.com; object-src 'self'"
+
+}    

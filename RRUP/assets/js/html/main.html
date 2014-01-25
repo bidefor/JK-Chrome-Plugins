@@ -1,0 +1,70 @@
+<div class="topbar clearfix">
+    <div class="userinfo">
+        <strong><%= user_info.username%></strong><sup><a href="##" class="logout">Logout?</a></sup>, you have added <strong class="green"><%= user_info.records%></strong> URL records.
+    </div>
+    <div class="abtn">
+        <a href="##" class="btn btn-primary" id="btn-add">Add Current Url</a>
+    </div>
+</div>
+
+<div class="table_list">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (list) { %>
+                <% for (var i = 0, k = 1; i < list.length; i++, k++) { %>
+                    <tr class="single-data">
+                        <td>
+                            <div class="lid">
+                                <%= k %>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ltit">
+                                <a href="<%= list[i].url %>" title="<%= list[i].title %>" target="_blank" class="title"><%= list[i].title %></a>
+                                <%if (list[i].tag_name == null) {%>
+                                    <div class="unaddtag_box">
+                                        <a href="#" data-id="<%= list[i].id %>" class="add_tag">add tag</a>
+                                        <input type="text" placeholder="add tag" class="ipt_add_tag" />
+                                        <img src="assets/images/loading-s.gif" class="iloading" />
+                                        <ul class="tags">
+                                            <li><a href="#"><%= list[i].tag_name %></a><i class="del_tag">x</i></li>
+                                        </ul>
+                                    </div>
+                                <%} else {%>
+                                    <div class="addtag_box">
+                                        <a href="#" data-id="<%= list[i].id %>" class="add_tag">add tag</a>
+                                        <input type="text" placeholder="add tag" class="ipt_add_tag" />
+                                        <img src="assets/images/loading-s.gif" class="iloading" />
+                                        <ul class="tags">
+                                            <li><a href="#!/srchTag/<%= list[i].tag_name %>"><%= list[i].tag_name %></a><i class="del_tag">x</i></li>
+                                        </ul>
+                                    </div>
+                                <%}%>
+                                <a href="##" data-id="<%= list[i].id %>" class="delete">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4" align="center" style="text-align: center; font-weight: bold;">no data</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% if (list != null) { %>
+        <div class="pages">
+            <ul class="pagination">
+
+            </ul>
+        </div>
+    <% } %>
+</div>
+
+<a href="#!/main" class="index">index</a>

@@ -1,0 +1,14 @@
+{
+    "name": "RRUP",
+    "version": "1.0.0",
+    "author": "Jankerli <jankerli@gmail.com>",
+    "description": "Record Read URL Pages",
+    "dependencies": {
+        "grunt": "*",
+        "grunt-contrib-less": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-copy": "*"
+    }
+}
