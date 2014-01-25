@@ -1,7 +1,7 @@
 JK-Clear-Browsing-Data
 ======================
 
-A chrome extension tool: one key to clear chrome browsing data, such as AppCache, LocalStorage, Cookies and so on.
+A chrome extension tool: one key to clear chrome browsing data, such as AppCache, LocalStorage, Cookies and so on. [http://goo.gl/6Xdbv6](http://goo.gl/6Xdbv6)
 
 ## Release History
 
