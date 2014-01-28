@@ -15,7 +15,11 @@ var App = {
 
         this.timeId = setInterval(function () {
             self.doGetStock();
-        }, 15*1000);
+        }, 10*1000);
+
+        $('#refresh').on('click', function () {
+            self.doGetStock();
+        });
     },
 
     initLocalStorage: function () {
@@ -35,6 +39,28 @@ var App = {
                 self.code = val;
                 self.doGetStock();
             }
+        });
+
+        $('#max').on('blur', function () {
+            var val = $('#max').val();
+            if (val == '') return;
+            if (!_.isNumber(val)) {
+                console.log('请输入数字好不o(╯□╰)o');
+                return;
+            }
+            localStorage.setItem('max', val);
+            localStorage.setItem('isMaxAlarm', 0);
+        });
+
+        $('#min').on('blur', function () {
+            var val = $('#min').val();
+            if (val == '') return;
+            if (_.isNumber(val)) {
+                alert('请输入数字好不o(╯□╰)o');
+                return;
+            }
+            localStorage.setItem('min', val);
+            localStorage.setItem('isMinAlarm', 0);
         });
     },
 
@@ -57,6 +83,10 @@ var App = {
             }
 
         }, 'jsonp');
+    },
+
+    doAlarm: function () {
+        window.webkitNotifications.createNotification("assets/images/logo128x128.png", "HK Stock", "提醒文字").show();
     }
 
 };

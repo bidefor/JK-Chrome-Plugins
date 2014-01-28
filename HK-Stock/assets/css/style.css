@@ -20,6 +20,22 @@ img {
 .tc {
   text-align: center;
 }
+.alarm {
+  color: red;
+  font-weight: bold;
+}
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+  padding-top: 130px;
+}
 .wrap {
   width: 620px;
 }
@@ -36,9 +52,9 @@ img {
   padding: 7px;
   width: 250px;
 }
-.wrap table thead th img {
+.wrap table thead th .refresh {
   padding-left: 15px;
-  display: none;
+  cursor: pointer;
 }
 .wrap table tbody th,
 .wrap table tbody td {
@@ -50,4 +66,19 @@ img {
 }
 .wrap table tbody th {
   text-align: right;
+}
+.wrap .setting {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.wrap .setting .title {
+  font-size: 16px;
+  padding: 15px 0;
+}
+.wrap .setting label {
+  padding: 0 30px;
+}
+.wrap .setting label input {
+  width: 140px;
+  padding: 5px;
 }

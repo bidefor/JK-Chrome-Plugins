@@ -6,12 +6,17 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-
+    <div id="loading">
+        <span><img src="assets/images/loading.gif"></span>
+    </div>
     <div class="wrap">
         <table>
             <thead>
                 <tr>
-                    <th colspan="6" class="tc"><input type="text" id="code" placeholder="input stock code and press enter key..."><img src="assets/images/loading.gif" id="loading"></th>
+                    <th colspan="6" class="tc">
+                        <input type="text" id="code" placeholder="input stock code and press enter key...">
+                        <img src="assets/images/icon-refresh.png" id="refresh" class="refresh">
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -19,9 +24,9 @@
                     <th>公司名称：</th>
                     <td><span id="s_name"></span></td>
                     <th>今开盘：</th>
-                    <td><span id="s_jinkaipan"></span></td>
+                    <td><span id="s_kaipanjia"></span></td>
                     <th>昨收盘：</th>
-                    <td><span id="s_zuoshoupan"></span></td>
+                    <td><span id="s_zuoshoujia"></span></td>
                 </tr>
                 <tr>
                     <th>成交价：</th>
@@ -34,10 +39,10 @@
                 <tr>
                     <th>成交额(元)：</th>
                     <td><span id="s_chengjiaoe"></span></td>
-                    <th>涨跌额：</th>
-                    <td><span id="s_zhangdiee"></span>%</td>
-                    <th>涨跌幅：</th>
-                    <td><span id="s_zhangdiefu"></span>%</td>
+                    <th>振幅：</th>
+                    <td><span id="s_zhenfu"></span>%</td>
+                    <th>市盈率：</th>
+                    <td><span id="s_shiyinglv"></span>%</td>
                 </tr>
                 <tr>
                     <th>成交量(股)：</th>
@@ -48,10 +53,18 @@
                     <td><span id="s_zuidi"></span></td>
                 </tr>
                 <tr>
-                    <td colspan="6" class="tc"><span id="s_riqi"></span></td>
+                    <th>港股市值：</th>
+                    <td><span id="s_shizhi"></span>亿</td>
+                    <th>刷新时间：</th>
+                    <td colspan="3" class="tc"><span id="s_riqi"></span></td>
                 </tr>
             </tbody>
         </table>
+        <!-- <div class="setting">
+            <div class="title">桌面提醒设置：(tips:红色表示已提醒，点击或者重新设置价格即可再次生效。)</div>
+            <label for="max">成交价大于：<input type="text" id="max" placeholder="input your price"></label>
+            <label for="min">成交价小于：<input type="text" id="min" placeholder="input your price"></label>
+        </div> -->
     </div>
 
     <script src="assets/js/zepto.min.js"></script>

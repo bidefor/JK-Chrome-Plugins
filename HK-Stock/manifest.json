@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "HK Stock",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "实时查看港股价格行情",
     "browser_action": {
         "default_title": "HK Stock",

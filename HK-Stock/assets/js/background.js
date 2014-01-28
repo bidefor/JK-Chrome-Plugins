@@ -1,12 +1,20 @@
-var ls = localStorage.getItem('code');
-var code = ls ? ls : '00434';
+
+var ls      = localStorage.getItem('code');
+var code    = ls ? ls : '00434';
 var api_url = 'https://jankerli.sinaapp.com/hk-stock/?code=' + code;
 
 getStock();
 
 setInterval(function () {
-    getStock();
-}, 15 * 1000);
+
+    var date = new Date();
+    var hour = date.getHours();
+
+    if (hour >= 9 && hour < 17) {
+        getStock();
+    }
+
+}, 10 * 1000);
 
 /**
  * 获取市场价格
@@ -29,7 +37,7 @@ function getStock () {
  * 价格提醒
  */
 function doAlarm () {
-    window.webkitNotifications.createNotification("assets/images/logo.png", "口袋比特币", "其实以后这个程序会被广泛使用于邮箱和网页游戏中。").show();
+    window.webkitNotifications.createNotification("assets/images/logo128x128.png", "HK Stock", "提醒文字").show();
 }
 
 /**
@@ -39,9 +47,10 @@ function doAlarm () {
  * @param  {Function} success 成功回调函数
  */
 function Ajax (url, cfg, success) {
-    var op = Object.prototype.toString;
-    var doc = document;
+    var op   = Object.prototype.toString;
+    var doc  = document;
     var head = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+
     if (op.call(cfg) === '[object Function]') {
         success = cfg;
         cfg = {};
